@@ -20,7 +20,7 @@ public class Remove extends HttpServlet {
        		PrintWriter out = response.getWriter();
 		out.println("<html><body>");
 		out.println("<form method='post'>");
-		out.println("Remover ID: <input type='number' name='id'><br>");
+		out.println("Remover registro cujo passaporte eh: <input type='text' name='passaporte'><br>");
 		out.println("<input type='submit' value='Submit'>");
 		out.println("</form>");
 		out.println("<body><html>");
@@ -35,7 +35,7 @@ public class Remove extends HttpServlet {
 			try {
 				dao = new DAO();
 					
-		dao.remove(Integer.valueOf(request.getParameter("id")));
+		dao.remove(String.valueOf(request.getParameter("passaporte")));
 		
        		PrintWriter out = response.getWriter();
        		out.println("<html><body>");

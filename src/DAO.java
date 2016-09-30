@@ -88,13 +88,13 @@ public class DAO {
 		}
 	}
 	
-	public void remove(Integer id) {
+	public void remove(String passaporte) {
 		PreparedStatement stmt;
 		try {
 			stmt = connection
-			   .prepareStatement("DELETE FROM Pessoas WHERE id=?");
+			   .prepareStatement("DELETE FROM Pessoas WHERE passaporte=?");
 		
-		stmt.setLong(1, id);
+		stmt.setString(1, passaporte);
 		stmt.execute();
 		stmt.close();
 		

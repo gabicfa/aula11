@@ -44,6 +44,9 @@ public class Lista extends HttpServlet {
 
 		}
 		out.println("</table></body></html>");
+		out.println("<form action='/Aula11/remove'>");
+		out.println("<input type='submit' value='Remover registro existente' </input>");
+		out.println("</form>");
         
 		dao.close();
         

@@ -28,6 +28,9 @@ throws ServletException, IOException {
 	out.println("Passaporte: <input type='text' name='passaporte'<br><p></p>");
 	out.println("<input type='submit' value='Submit'>");
 	out.println("</form>");
+	out.println("<form action='/Aula11/remove'>");
+	out.println("<input type='submit' value='Remover registro existente' </input>");
+	out.println("</form>");
 	out.println("<body><html>");
 	}
 	@Override
